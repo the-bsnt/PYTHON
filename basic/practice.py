@@ -1,9 +1,10 @@
-name = input("enter your name:      ")
-weight = len(name)
-print(weight)
-if weight < 3:
-    print("error: name must be at least 3 characters long.")
-elif weight > 50:
-    print("error: name can be maximum of 50 characters long.")
-else:
-    print("name look good!")
+first_name = input("enter your first name ; ")
+last_name = input("enter your last name : ")
+space = " "
+print("my full name is ", first_name, last_name)
+name = first_name + space + last_name
+print("the name is ", name)
+# 5
+birth_year = input("what is your birth yearr.")
+age = 2023 - int(birth_year)
+print("age = ", age)
