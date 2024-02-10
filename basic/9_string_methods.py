@@ -26,5 +26,5 @@ print(
 #
 print(
     "Science" in course
-)  # in is an operator that returns boolean value whether "Science" is in course string
+)  # in is an operator that returns boolean value whether "Science" is in course string or not
 print("science" in course)  # returns as "False" because [ case sensitive  ]
