@@ -60,3 +60,4 @@ print(course.replace("Computer Science", "CS"))
 
 # operator
 print("echnology" in course)  # returns boolen data ie True or False
+print(course)
