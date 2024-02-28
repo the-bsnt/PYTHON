@@ -118,4 +118,7 @@ print("NEgation of a =", not a)
 print("NEgation of b =", not b)
 print("Negation of a +b = ", not (a or b))
 
+
 # 15
+def inter():
+    print("the text is yellow ")
