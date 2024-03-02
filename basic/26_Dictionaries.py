@@ -1,5 +1,4 @@
 # 1. Dictionaries are used to store data values in KEY:VALUE pairs.
-
 #    A dictionary is a collection which is ordered* (after python version 3.7), changeable and do not allow duplicates.
 
 car = {
@@ -14,7 +13,6 @@ print(car)
 print(car["model"])  # accessing data by passing key.
 
 # 2. what if we pass the key that does not exits
-
 #    print(car["age"])   # KeyError: 'age' so if we use .get("key") method we get 'none' if key doesnt exist in dictionary
 
 print(car.get("age"))  # it returns 'none'
