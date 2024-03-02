@@ -25,7 +25,7 @@ a, b, c, d = list1
 print(a, b, c, d)
 
 
-# NOTE While Unpacking, we must assign tuple data with enough variable. We
+# NOTE While Unpacking, we must assign tuple data with enough variables. We
 # cannot left some tuple data unassigned.
 
 tuple2 = (1, 2, 3, 5, 6)

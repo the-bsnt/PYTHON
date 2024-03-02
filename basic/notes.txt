@@ -1,0 +1,7 @@
+NOTE: 1 
+In python,
+The square braces [ ] in Python notation typically indicate optional parameters or arguments.
+In the method signature D.pop(k[,d]), the square braces around 'd' indicate that the parameter 'd' is optional. This means that you can choose to include it or omit it when calling the pop() method on a dictionary.
+So, when you see [,d] in the method signature, it means that [,'d'] is an optional parameter. You can provide it if you want to specify a default value to be returned if the key k is not found in the dictionary D. If you don't provide a default value and the key k is not found, a KeyError will be raised.
+
+NOTE: 2 
