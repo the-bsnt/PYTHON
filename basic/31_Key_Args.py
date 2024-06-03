@@ -33,3 +33,5 @@ def total(price, shipping, discount):
 # total(shipping=45,discount=0,450)  # SyntaxError: positional argument follows keyword argument#
 # This causes error because we use keyword args before positional args.
 total(450, shipping=45, discount=0)  # This is right code.
+
+total(price=570, shipping=25, discount=40)
