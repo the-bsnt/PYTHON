@@ -5,3 +5,10 @@ In the method signature D.pop(k[,d]), the square braces around 'd' indicate that
 So, when you see [,d] in the method signature, it means that [,'d'] is an optional parameter. You can provide it if you want to specify a default value to be returned if the key k is not found in the dictionary D. If you don't provide a default value and the key k is not found, a KeyError will be raised.
 
 NOTE: 2 
+String strip method -=>Remove spaces at the beginning and at the end of the string:
+
+txt = "         banana       "
+x = txt.strip()
+print(x)
+
+NOTE: 3
