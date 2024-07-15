@@ -47,3 +47,25 @@ print(car)
 p_default = car.pop("model", "not found")
 print("returned default value=", p_default)
 print(car)
+
+
+# nested dictionary
+student = {
+    "name": "basnet",
+    "roll_no": 28241,
+    "scores": {"phy": 57, "che": 68, "maths": 65},
+}
+print(student["scores"]["phy"])
+
+# methods in dictionary
+# 1
+print(student.keys())  # returns all keys
+# 2
+print(student.values())  # returns all values
+# 3
+print(student.items())  # returns all (key,value) pairs as tuples
+# 4
+print(student.get("28241", "not found"))  # returns the value according to the key
+# 5
+student.update({"batch": 2078})
+print(student)
