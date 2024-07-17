@@ -19,6 +19,7 @@ fn = "Basnet"
 ln = "Sameer"
 intro(fn, ln)
 
+
 lst = ["sameer", 17, "basnet"]
 
 
@@ -28,3 +29,20 @@ def print_list(list):
 
 
 print_list(lst)
+print(flush=True)  # flushes the input buffer(istream) like space or anything else
+
+
+# * RETURN Statement
+
+
+def square(n):
+    s = n**2
+    print(f"square = {s}")
+
+
+print(square(8))
+# Output :
+# square = 64
+# None
+
+# NOTE: By default, python interpetor return value none in case of absence of return statement
