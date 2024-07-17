@@ -18,3 +18,13 @@ def intro(firstname, lastname):
 fn = "Basnet"
 ln = "Sameer"
 intro(fn, ln)
+
+lst = ["sameer", 17, "basnet"]
+
+
+def print_list(list):
+    for i in lst:
+        print(i, end=" ")
+
+
+print_list(lst)

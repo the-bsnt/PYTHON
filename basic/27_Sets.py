@@ -53,3 +53,18 @@ print(set_2)
 # 4
 print(set_1.pop())  # removes an random element from set and also returns that emement
 print(set_1)
+
+
+setA = {1, 2, 3, "apple", "ball"}
+setB = {2, 5, 4, 6, "ball", "bat"}
+print(setA)
+print(setB)
+
+
+# * 5
+setC = setA.union(setB)  # * combines both set values and return new
+print(setC)
+
+# * 6
+setD = setA.intersection(setB)
+print(setD)

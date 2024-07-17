@@ -1,10 +1,10 @@
-def function1(fname, lname):
+def function(fname, lname):
     print(f"Hi ! My name is {fname} {lname}. And, I am professional coder.")
 
 
 ln = "Basnet"
 fn = "Sameer"
-function1(ln, fn)
+function(ln, fn)
 # ln and fn are positional arguments ie. position or order of arguments matters.
 
 
