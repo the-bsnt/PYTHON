@@ -1,0 +1,23 @@
+if __name__ = '__main__': what does it means??
+
+
+
+The code if __name__ == '__main__': is a common construct in Python that controls when certain parts of your code execute. It leverages a special variable named __name__.
+
+Here's a breakdown of how it works:
+
+__name__: This is a built-in variable in Python that holds the name of the current module. When you run a Python script directly (e.g., python my_script.py), the __name__ variable inside that script becomes '__main__'. On the other hand, if you import the script as a module into another script, __name__ will be set to the module's name (e.g., my_script).
+
+if statement: This conditional statement checks the value of __name__.
+
+__name__ == '__main__': This condition is true only when the script is being run directly. If it's imported as a module, the condition will be false.
+
+In simpler terms:
+
+Code within the if block will only execute when you run the script directly.
+Code outside the if block will always execute, regardless of whether the script is run directly or imported.
+Benefits of using if __name__ == '__main__':
+
+Modular Code: You can define functions and classes in your script while keeping the code that runs the script itself separate. This makes your code more organized and reusable.
+Avoids Side Effects: When you import a module, you only get the definitions and functionality. Any code that interacts with the environment (like user input/output) should be placed within the if block to prevent unintended execution during import.
+By understanding if __name__ == '__main__':, you can write cleaner and more versatile Python code that behaves differently depending on how it's used.
