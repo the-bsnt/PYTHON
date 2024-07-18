@@ -12,7 +12,7 @@ obj = Test()
 
 
 # * NOTE: Constructor always take parameter which is Self Parameter.
-# * The Self Parameter is a reference to the Current Instance of the class, and is used to access variables that belongs to the class.
+# * The Self Parameter is a reference to the Current Instance of the class ie.object, and is used to access variables that belongs to the class.
 class Note:
     a = 9
     b = 4
