@@ -20,3 +20,13 @@ class Method_:
 
 M = Method_()
 M.methd("hari", 25)
+
+# * Delete Keyword
+print(M.age)
+del M.age
+# print(M.age)  #!AttributeError: 'Method_' object has no attribute 'age'
+
+# also
+print(M.name)
+del M
+# print(M.name) #!NameError: name 'M' is not defined
