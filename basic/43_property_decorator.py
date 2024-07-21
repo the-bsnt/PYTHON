@@ -14,7 +14,7 @@ print(m1.che)
 print(f"{m1.percentage}%")
 
 
-# TODO in this type of situation where one attribute depends on another or we cannot give the attribute a fixed value , we can we seperate method and call it
+# TODO in this type of situation where one attribute depends on another or we cannot give the attribute a fixed value , we make it seperate method and call it
 
 
 class Student:
