@@ -1,0 +1,11 @@
+n = 17
+n_bin = bin(n)
+n_oct = oct(n)
+n_hex = hex(n)
+print(n)
+print(n_bin)
+print(n_oct)
+print(n_hex)
+print(int(n_bin, 2))
+print(int(n_oct, 8))
+print(int(n_hex, 16))
