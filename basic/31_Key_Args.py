@@ -35,3 +35,15 @@ def total(price, shipping, discount):
 total(450, shipping=45, discount=0)  # This is right code.
 
 total(price=570, shipping=25, discount=40)
+
+
+# * ALSO
+def total2(price, shipping, **kwargs):
+    # s = kwargs.get("shipping", 0)
+    d = kwargs.get("discount", 0)
+    total = price + shipping - d
+    print("total = ", total)
+    print(type(kwargs))
+
+
+total2(price=570, shipping=25, discount=40)
