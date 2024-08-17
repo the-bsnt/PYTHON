@@ -1,0 +1,18 @@
+difference between iterated over and iterated upon\
+
+Iterated Over
+Focuses on the data structure or sequence being processed.
+Implies going through each element of the sequence.   
+Example:
+
+"We iterated over the list of numbers to find the largest value."
+Iterated Upon
+Focuses on the action or process being repeated.
+Implies performing an operation on each element of the sequence.
+Example:
+
+"The function iterates upon each character in the string to count vowels."
+In essence:
+
+Iterated over highlights the data being traversed.
+Iterated upon emphasizes the action performed on the data.
