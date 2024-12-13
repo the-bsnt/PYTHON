@@ -1,16 +1,24 @@
-def reverse_list(my_list):
-    """Reverses a list without using sort.
+def words2number(s):
+    word_dict = {
+        "zero": "0",
+        "one": "1",
+        "two": "2",
+        "three": "3",
+        "four": "4",
+        "five": "5",
+        "six": "6",
+        "seven": "7",
+        "eight": "8",
+        "nine": "9",
+        "ten": "10",
+    }
+    lst = s.strip().split()
+    n = []
+    for i in lst:
+        n.append(word_dict[i])
+    return int("".join(n))
 
-    Args:
-      my_list: The list to reverse (required).
 
-    Returns:
-      A new list with the elements in reverse order.
-    """
-    return my_list[::-1]
+print(words2number("one five two"))
 
-
-# Example usage
-original_list = [1, 2, 3, 4, 5]
-reversed_list = reverse_list(original_list.copy())  # Avoid modifying original list
-print(f"Original: {original_list}, Reversed: {reversed_list}")
+# print(words2number("one five two"))
