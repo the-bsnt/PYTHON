@@ -2,3 +2,25 @@ No aardv*rks here!
 Only armadillos and anteaters.
 Animals are run down: very awful road kill.
 I prefer a quick guacamole made from avocados.
+
+
+Vaccination site? Jameson House
+Vaccine type? AstraZeneca
+Number of vaccines requested? 70000
+Shipping fee per 100 doses? 1.25
+Vaccine type? Pfizer
+Number of vaccines requested? 85000
+Shipping fee per 100 doses? .9
+Vaccine type? 
+Cash paid? 3000
+VACCINES2U                SHIPPING ORDER
+VAT GB123456789            JAMESON HOUSE
+
+Vaccine                   Qty.      Cost
+ASTRAZENECA              70000    875.00
+PFIZER                   85000    765.00
+
+TOTAL                            1640.00
+VAT INCLUDED IN TOTAL             273.33
+CASH PAID                        3000.00
+CHANGE                           1360.00

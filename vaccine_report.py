@@ -13,12 +13,12 @@ while True:
     total_cost += total_shipping_cost
     items.append((typ, quantity, total_shipping_cost))
 cash_paid = int(input("Cash paid? "))
-vat_amount = total_cost * 0.2
+vat_amount = total_cost * 0.2 * 100 / 120
 change = cash_paid - total_cost
-print(f"{company_name:30s}{'SHIPPING ORDER':>25s}")
-print(f"{vat_number:30s}{site:>25s}")
+print(f"{company_name:25s}{'SHIPPING ORDER':>15s}")
+print(f"{vat_number:25s}{site:>15s}")
 print()
-print(f"{'Vaccine':25s}{'Qty.':5s}{'Cost':>10s}")
+print(f"{'Vaccine':25s}{'Qty.':>5s}{'Cost':>10s}")
 for typ, qty, cost in items:
     print(f"{typ:25s}{qty:5d}{cost:10.2f}")
 print()
