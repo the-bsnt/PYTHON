@@ -28,3 +28,5 @@ print(car1.type)
 
 
 # ^ NOTE:Adaptability: If you have to change the inheritance structure later, you don't need to modify the code using super(); it will automatically adjust.
+#
+# (if you changed the name of parent class later, you need not to modify the code using super method.)

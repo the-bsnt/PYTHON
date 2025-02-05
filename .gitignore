@@ -1,0 +1,9 @@
+# Ignore the virtual environment folder
+env/
+.vscode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+.env

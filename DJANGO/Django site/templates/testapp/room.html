@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<h1>this is room template</h1> <br>
+
+{% for r in rooms %}
+<div> Room No = {{r.id}} -- <a href="{{r.id}}">{{r.msg}}</a> </div>
+{% endfor %}
+{% endblock %}
