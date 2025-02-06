@@ -14,6 +14,15 @@
         Article Title : {{ article_name }}
         Article Content : {{ article_content }}
     </div>
+    <div>
+        <h1>Object list</h1>
+        {% for x in object_list %}
+        <p>Object Name: {{ x }} <br> Title : {{ x.title }} <br> Content: {{ x.content }} <br>
+
+        </p>
+        {% endfor %}
+    </div>
+
 </body>
 
 </html>

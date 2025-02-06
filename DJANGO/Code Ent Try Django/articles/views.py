@@ -6,8 +6,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def article_home(request):
+    #from database???
     article_obj = Article.objects.get(pk=2)
+    article_queryset = Article.objects.all()
+  
+
     context = {
+        "object_list": article_queryset,
         "article_name": article_obj.title,
         "article_content": article_obj.content,
     }
