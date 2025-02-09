@@ -20,3 +20,12 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class Marks(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    total_marks = models.IntegerField(default=100)
+    pass_marks = models.IntegerField(default=40)
+
+    def __str__(self):
+        return str(self.total_marks)

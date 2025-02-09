@@ -2,4 +2,8 @@ from django.urls import path
 from .views import *
 
 # URL CONF
-urlpatterns = [path("", index, name="index")]
+app_name = "polls"
+urlpatterns = [
+    path("", index, name="index"),
+    path("<int:question_id>/", detail, name="detail"),
+]
