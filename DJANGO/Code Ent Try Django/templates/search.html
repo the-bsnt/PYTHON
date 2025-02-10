@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+{% block content %}
+
+<form action="" method="GET">
+    name : <input type="text" name="q">
+    <input type="submit">
+</form>
+
+{% if article_obj %}
+<h1>{{ article_obj.title }}</h1>
+<h1>{{ article_obj.content }}</h1>
+{% endif %}
+
+{% endblock %}

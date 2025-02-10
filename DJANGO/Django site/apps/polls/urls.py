@@ -6,4 +6,5 @@ app_name = "polls"
 urlpatterns = [
     path("", index, name="index"),
     path("<int:question_id>/", detail, name="detail"),
+    path("<int:question_id>/", vote, name="vote"),
 ]

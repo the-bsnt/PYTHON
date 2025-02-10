@@ -19,4 +19,5 @@ def detail(request, question_id):
     return render(request, "polls/detail.html", {"question": question})
 
 
-
+def vote(request, question_id):
+    return HttpResponse("vote done")
