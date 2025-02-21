@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # custom apps
     "apps.testapp",
     "apps.polls",
+    "apps.polls2",
     # debug toolbar for debug
     "debug_toolbar",
 ]

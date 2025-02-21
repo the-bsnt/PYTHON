@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+</head>
+
+<body>
+    <h1> The question Details</h1>
+    <p>
+        {{ question.id }}-> {{ question.question_text }} <br> {{ question.pub_date }}
+    </p>
+    <h2>Choices under this question</h2>
+    <ul>
+        {% for choice in question.choice_set.all %}
+        <li>{{ choice.choice_text }} - {{ choice.votes}} </li>
+        {% endfor %}
+    </ul>
+    <h3>Marks under this question</h3>
+    {% for m in question.marks_set.all %}
+    marks - {{ m }}
+    {% endfor %}
+    <!-- form
+    <form action="{% url 'polls2:vote' question.id %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>
+                <h1>{{ question.question_text }}</h1>
+            </legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            {% for choice in question.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+            {% endfor %}
+        </fieldset>
+        <input type="submit" value="Vote">
+    </form> -->
+</body>
+
+</html>

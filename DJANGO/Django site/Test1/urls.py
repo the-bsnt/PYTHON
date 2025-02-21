@@ -25,5 +25,6 @@ urlpatterns = [
     path("home/", home),
     path("home/testapp/", include("apps.testapp.urls")),
     path("home/polls/", include("apps.polls.urls")),
+    path("home/polls2/", include("apps.polls2.urls")),
     path("__debug__/", include(debug_toolbar.urls)),
 ]
