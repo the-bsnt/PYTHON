@@ -22,7 +22,7 @@
     {% for m in question.marks_set.all %}
     marks - {{ m }}
     {% endfor %}
-    <!-- form
+    form
     <form action="{% url 'polls2:vote' question.id %}" method="post">
         {% csrf_token %}
         <fieldset>
@@ -36,7 +36,7 @@
             {% endfor %}
         </fieldset>
         <input type="submit" value="Vote">
-    </form> -->
+    </form>
 </body>
 
 </html>
