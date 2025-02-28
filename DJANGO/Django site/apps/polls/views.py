@@ -3,12 +3,26 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
 from django.http import Http404
 from django.urls import reverse
-
+from djaggo.views import generic
+from django.utils import timezone
 
 # displays the latest 5 poll questions in the system,
-def index(request):
+
+"""def index(request):
     question_list = Question.objects.order_by("-pub_date")[:5]
-    return render(request, "polls/index.html", {"questions": question_list})
+    return render(request, "polls/index.html", {"questions": question_list})"""
+
+# Using class based generic views
+
+
+class IndexView(generic.ListView):
+    template_name = "polls/index.html"
+    context_object_name = "questions"
+
+    def get_queryset(self):
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by(
+            -pub_date
+        )[:5]
 
 
 def detail(request, question_id):
