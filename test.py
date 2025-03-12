@@ -1,39 +1,17 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-import re
-
-n = int(input())
+from datetime import datetime
 
 
-def check_regex(regex):
-    try:
-        re.compile(regex)
-        return True
-    except re.error:
-        return False
+# Complete the time_delta function below.
+def time_delta(t1, t2):
+    frmt = "%a %d %b %Y %H:%M:%S %z"
+    dt1 = datetime.strptime(t1, frmt)
+    dt2 = datetime.strptime(t2, frmt)
+    return str(int((dt1 - dt2).total_seconds()))
 
 
-regex_list = []
-for i in range(n):
-    regex_list.append(input())
-for i in regex_list:
-    print(check_regex(i))
-
-
-r"""
-You are given a string .
-Your task is to find out whether  is a valid regex or not.
-
-
-Sample Input
-
-2
-.*\+
-.*+
-Sample Output
-
-True
-False
-Explanation
-
-.*\+ : Valid regex.
-.*+: Has the error multiple repeat. Hence, it is invalid."""
+t = int(input())
+for t_itr in range(t):
+    t1 = input()
+    t2 = input()
+    delta = time_delta(t1, t2)
+    print(delta)
