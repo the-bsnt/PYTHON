@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen font-sans">
+
+    <div class="w-full max-w-lg bg-white shadow-lg rounded-lg p-6">
+        <h4 class="text-3xl font-bold text-center text-blue-600 mb-6">Update Employee Details</h4>
+
+        <form action="{% url 'myapp:employee_update' employee.e_id %}" method="post">
+            {% csrf_token %}
+
+            <div class="space-y-4">
+                <div>
+                    <label for="e_name" class="block text-lg font-semibold text-gray-700">Employee Name:</label>
+                    <input type="text" placeholder="{{ employee.e_name }}" id="e_name" name="e_name"
+                        class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="e_email" class="block text-lg font-semibold text-gray-700">Email:</label>
+                    <input type="email" placeholder="{{ employee.e_email }}" id="e_email" name="e_email"
+                        class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="d_name" class="block text-lg font-semibold text-gray-700">Department:</label>
+                    <input type="text" placeholder="{{ employee.d_id }}" id="d_name" name="d_name"
+                        class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div class="mt-6 text-center">
+                    <button type="submit"
+                        class="bg-yellow-500 text-gray-800 py-2 px-6 rounded-lg hover:bg-yellow-600 transition-all duration-200">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

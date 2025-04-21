@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen font-sans">
+
+    <div class="w-full max-w-lg bg-white shadow-lg rounded-lg p-6">
+        <h4 class="text-3xl font-bold text-center text-blue-600 mb-6">
+            Employee Profile
+        </h4>
+
+        <div class="space-y-4 text-lg text-gray-800">
+            <p class="flex justify-between">
+                <span class="font-semibold text-gray-700">Employee Name:</span>
+                <span class="text-gray-600">{{ employee.e_name }}</span>
+            </p>
+            <p class="flex justify-between">
+                <span class="font-semibold text-gray-700">Employee ID:</span>
+                <span class="text-gray-600">{{ employee.e_id }}</span>
+            </p>
+            <p class="flex justify-between">
+                <span class="font-semibold text-gray-700">Employee Email:</span>
+                <span class="text-gray-600">{{ employee.e_email }}</span>
+            </p>
+            <p class="flex justify-between">
+                <span class="font-semibold text-gray-700">Department:</span>
+                <span class="text-gray-600">{{ employee.d_id }}</span>
+            </p>
+        </div>
+
+        <div class="mt-8 flex justify-center space-x-4">
+            <a href="{% url 'myapp:employee_delete' employee.e_id %}">
+                <button class="bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700 transition-all duration-200">
+                    Delete
+                </button>
+            </a>
+            <a href="{% url 'myapp:employee_edit' employee.e_id %}">
+                <button
+                    class="bg-yellow-500 text-gray-800 py-2 px-6 rounded-lg hover:bg-yellow-600 transition-all duration-200">
+                    Edit
+                </button>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
