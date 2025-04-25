@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from .models import *
 from django.urls import reverse
+from .forms import *
 
 
 def index(request):
@@ -111,3 +112,17 @@ def employee_update(request, emp_id):
             emp.d_id = depart
         emp.save()
         return HttpResponseRedirect(reverse("myapp:employee_dashboard"))
+
+
+# forms
+
+
+def post_new(request):
+    if request.method == "POST":
+        form = CreatePost(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("form submitted")
+    else:
+        form = CreatePost()
+        return render(request, "myapp/post_new.html", {"form": form})

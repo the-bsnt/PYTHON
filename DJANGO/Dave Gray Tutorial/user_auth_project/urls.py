@@ -1,5 +1,5 @@
 """
-URL configuration for revision project.
+URL configuration for user_auth_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -18,8 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("myapp/", include("myapp.urls")),
+    path("users/", include("users.urls")),
 ]

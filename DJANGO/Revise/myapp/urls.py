@@ -36,4 +36,6 @@ urlpatterns = [
         employee_update,
         name="employee_update",
     ),
+    # form
+    path("postnew", post_new, name="post_new"),
 ]
