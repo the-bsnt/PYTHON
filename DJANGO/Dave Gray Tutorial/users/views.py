@@ -32,6 +32,7 @@ def login_user(request):
             login(request, form.get_user())
             return redirect("users:dashboard")
     else:
+        
         form = AuthenticationForm()
     return render(request, "users/login.html", {"form": form})
 

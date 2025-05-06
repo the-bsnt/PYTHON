@@ -1,0 +1,36 @@
+services:
+  weatherapp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    # command: sh -c "gunicorn weather_app.wsgi:application --bind 0.0.0.0:8000 --workers 4 --timeout 120"
+
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres-db
+    networks:
+      - weather-app-network
+  postgres-db:
+    image: postgres:15.0-alpine
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    networks:
+      - weather-app-network
+networks:
+  weather-app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

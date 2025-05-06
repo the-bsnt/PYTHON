@@ -1,0 +1,74 @@
+# IDEs and tooling
+**/.idea
+**/.vscode
+**/.vs
+**/.project
+**/.classpath
+**/.settings
+**/.toolstarget
+**/*.dbmdl
+**/*.jfm
+**/*.*proj.user
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+.eggs/
+env/
+venv/
+ENV/
+.Python
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Git and related
+**/.git
+**/.gitignore
+
+# Docker-related
+**/.dockerignore
+**/Dockerfile*
+**/docker-compose*
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Azure Dev Spaces
+**/azds.yaml
+**/charts
+
+# Django-specific
+*.sqlite3
+*.log
+*.pid
+*.coverage
+**/.coverage*
+**/.celerybeat.pid*
+secrets.dev.yaml
+values.dev.yaml
+
+# Static/media files if collected separately
+staticfiles/
+mediafiles/
+
+# Environment files
+**/.env
+
+# Project docs or unnecessary files
+README.md
+
+# Build artifacts (optional)
+build/
+dist/
+*.bak
+*.tmp
+*.swp
+*.swo
