@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view
 from products.models import *
 
 
+# & JsonResponse
 @csrf_exempt
 def api_home(request, *args, **kwargs):
     body = request.body  # byte strings of JSON data
@@ -29,6 +30,7 @@ def api_home(request, *args, **kwargs):
     return JsonResponse(data)
 
 
+# & Using HttpResponse
 def api_model(request, *args, **kwargs):
     model_data = Product.objects.all().order_by("?").first()
     data = {}
