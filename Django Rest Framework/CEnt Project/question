@@ -1,0 +1,22 @@
+[06/Jul/2025 16:19:53] "DELETE /products/11/delete/ HTTP/1.1" 404 3408
+[06/Jul/2025 16:20:32] "DELETE /products/11/delete HTTP/1.1" 200 5107
+
+what the difference with having / or not having / in request , and why it differs.
+
+Method Not Allowed: /products/10/delete
+[06/Jul/2025 16:18:14] "GET /products/10/delete HTTP/1.1" 405 5189
+[06/Jul/2025 16:18:17] "DELETE /products/10/delete HTTP/1.1" 200 5107
+Not Found: /products/10/
+[06/Jul/2025 16:18:34] "GET /products/10/ HTTP/1.1" 404 6948
+[06/Jul/2025 16:18:42] "GET /products/ HTTP/1.1" 200 9684
+[06/Jul/2025 16:19:16] "GET /products/11 HTTP/1.1" 301 0
+[06/Jul/2025 16:19:16] "GET /products/11/ HTTP/1.1" 200 7125
+Method Not Allowed: /products/11/delete
+[06/Jul/2025 16:19:21] "GET /products/11/delete HTTP/1.1" 405 5189
+[06/Jul/2025 16:19:47] "GET /products/5/ HTTP/1.1" 200 99
+Not Found: /products/11/delete/
+[06/Jul/2025 16:19:53] "DELETE /products/11/delete/ HTTP/1.1" 404 3408
+[06/Jul/2025 16:20:32] "DELETE /products/11/delete HTTP/1.1" 200 5107
+Not Found: /products/11/
+[06/Jul/2025 16:20:38] "GET /products/11/ HTTP/1.1" 404 6948
+[06/Jul/2025 16:22:19] "DELETE /products/9/delete HTTP/1.1" 204 0

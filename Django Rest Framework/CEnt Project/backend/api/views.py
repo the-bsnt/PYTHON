@@ -5,27 +5,26 @@ from django.forms.models import model_to_dict
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from products.models import *
+from products.serializers import *
+
+from rest_framework import generics
 
 
 # & JsonResponse
 @csrf_exempt
 def api_home(request, *args, **kwargs):
     body = request.body  # byte strings of JSON data
-    print(body)
     data = {}
     try:
         data = json.loads(body)  # strings of JSON data -> python dictionary
 
     except:
         pass
-    print(data)
-    print(request.headers)
     # data["headers"] = request.headers  # or request.META
     #!  error occurs when you try to convert a non-serializable object (like HttpHeaders) into JSON
     # request.headers is not regular python dictionary but object of HttpHeaders. So, have to be converted to dict first.
     data["headers"] = dict(request.headers)
     data["content_type"] = request.content_type
-
     print(data)
     return JsonResponse(data)
 
@@ -52,12 +51,27 @@ def api_model(request, *args, **kwargs):
 
 
 # & DRF View
-@api_view(["POST"])
+@api_view(["GET"])
 def drf_view(request, *args, **kwargs):
     # if request.method != "POST":
     #     return Response({"detail": "GET not allowed "}, status=405)
     model_data = Product.objects.all().order_by("?").first()
     data = {}
     if model_data:
-        data = model_to_dict(model_data, fields=["title", "content"])
+        # data = model_to_dict(
+        #     model_data, fields=["title", "content", "price", "sale_price"]
+        # )
+        data = ProductSerializer(model_data).data
     return Response(data)
+
+
+# & Ingesting Data ( accepting and processing INCOMING data) POST, PATCH, PUT
+
+
+@api_view(["POST"])
+def post_view(request, *args, **kwargs):
+    serializer = ProductSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        # serializer.save()
+        print(serializer.data)
+        return Response(serializer.data)

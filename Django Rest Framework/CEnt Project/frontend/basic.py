@@ -9,8 +9,8 @@ get_response = requests.post(
 )
 
 
-# print(get_response.text)  # print raw response text
-# print(get_response.status_code)
+print(get_response.text)  # print raw response text
+print(get_response.status_code)
 # print(get_response.json())
 
 # if http request -> html doc
@@ -30,3 +30,16 @@ try:
     print(get_response.json())
 except:
     print("Not JSON! Raw response:")
+
+
+### POST request
+
+endpoint4 = "http://localhost:8000/api/post_view/"
+
+get_response = requests.post(
+    endpoint4,
+    json={
+        "title": "This is post request.",
+    },
+)
+print(get_response.json())

@@ -6,7 +6,7 @@ Here's why:
 
 - **Deserialization Process:** Deserialization is the process of converting data from an external format (like JSON) into a Python object. In the context of a model serializer, you're usually providing data for a _single_ object to be created or updated.
 - **`serializer.save()`:** After you validate the deserialized data (e.g., `serializer.is_valid()`), you call `serializer.save()`. This method then creates or updates a _single_ instance of your model based on the validated data.
-- **QuerySets:** Querysets, on the other hand, represent a collection of objects from your database. They are the result of database queries that can return zero, one, or multiple instances. While you might serialize a queryset _into_ JSON, deserializing JSON usually aims to reconstruct a specific object.
+- **QuerySets:** Querysets, on the other hand, represent a collection of objects from your database. They are the result of database queries that can return zero, one, or multiple instances. `While you might serialize a queryset _into_ JSON, deserializing JSON usually aims to reconstruct a specific object.`
 
 **Example Scenario:**
 
