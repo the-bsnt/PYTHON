@@ -117,3 +117,5 @@ POST /products/11/deactivate # No trailing slash
 ```
 
 This approach gives you clean, predictable, modern API URLs that most developers will find intuitive.
+
+https://www.youtube.com/watch?v=5Mdyu0y3mCg
