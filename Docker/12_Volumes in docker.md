@@ -166,3 +166,37 @@ volumes:
 - Think of `node_modules` volume as a **sealed toolbox** inside the container — you can use the tools, but you cannot accidentally mess with them from the host.
 
 ---
+
+### Q. another work of volume is to make volumes or path accessible to service right;
+
+Exactly! Another key purpose of volumes in Docker/Compose is to make a specific path (folder) accessible to a container/service.
+
+**Key points**
+
+- Access files from host inside container
+
+= You can give the container access to files or folders from your host machine.
+
+Example: source code, config files, uploads, or logs.
+
+services: backend: image: my-backend volumes: - ./backend_code:/app # Host ./backend_code accessible inside container at /app
+
+/app inside container now has all files from ./backend_code on host.
+
+- Sharing files between multiple services
+
+- Multiple containers can use the same volume to read/write the same files.
+
+services: frontend: image: my-frontend volumes: - shared-data:/data backend: image: my-backend volumes: - shared-data:/data volumes: shared-data:
+
+Both frontend and backend can access /data and share files.
+
+Benefits
+
+Makes runtime data accessible outside the container.
+
+Enables development workflow where changes on host reflect immediately inside container.
+
+Allows services to share common files safely.
+
+### So yes, volumes are not just for persistence—they’re also about making paths accessible and shareable between host and containers or between containers.
