@@ -38,6 +38,8 @@ services:
       - "6379:6379"
     networks:
       - newproject
+    restart: always
+
 networks:
   newproject:
     driver: bridge
