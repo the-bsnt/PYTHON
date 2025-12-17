@@ -23,4 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("api.urls")),
     path("redis/", include("redis_intro.urls")),
+    path("accounts/", include("allauth.urls")),
+    path("users/", include("oauth2.urls")),
 ]
